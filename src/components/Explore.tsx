@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Explore() {
     return (
         <div className="w-full h-[50vh]">
@@ -28,30 +30,62 @@ function Carousel() {
         "AI / ML",
         "Finance",
     ];
-
+    let images = [
+        "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=600",
+    ];
+    const [currentImg, setCurrentImg] = useState<number>(0);
     return (
         <div
             id="carousel-box"
-            className="flex flex-col justify-center items-center gap-2"
+            className="flex flex-col justify-center items-center gap-4"
         >
             <div
                 id="carousel-window"
-                className="flex gap-4 justify-center items-center"
+                className="flex gap-6 justify-center items-center"
             >
-                <button>
+                <button
+                    className="p-2"
+                    onClick={() => {
+                        setCurrentImg(currentImg - 1);
+                    }}
+                >
                     <LeftButton />
                 </button>
                 <div
                     id="carousel"
-                    className="w-[500px] h-[200px] bg-black"
-                ></div>
-                <button>
+                    className="w-[500px] h-[250px] bg-black overflow-hidden object-cover"
+                >
+                    <img
+                        src={images[currentImg % images.length]}
+                        alt="Image"
+                        className="w-full object-cover"
+                    />
+                    ;
+                </div>
+                <button
+                    className="p-2"
+                    onClick={() => {
+                        setCurrentImg(currentImg + 1);
+                    }}
+                >
                     <RightButton />
                 </button>
             </div>
             <div id="carousel-items" className="flex w-full justify-evenly">
                 {listItems.map((item, index) => {
-                    return <button key={index}>{item}</button>;
+                    return (
+                        <span
+                            onClick={() => {
+                                setCurrentImg(index);
+                            }}
+                            key={index}
+                            className="nav-item-home cursor-pointer relative overflow-x-clip"
+                        >
+                            {item}
+                            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px]  bottom-[-3px] bg-black"></span>
+                        </span>
+                    );
                 })}
             </div>
         </div>
