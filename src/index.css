@@ -13,3 +13,6 @@ body {
 .nav-item-home:hover>span{
     left:0;
 }
+*{
+    user-select: none;
+}
