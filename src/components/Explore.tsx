@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export default function Explore() {
     return (
-        <div className="w-full h-[50vh]">
-            <div className="w-full px-16 flex justify-between items-center h-full">
+        <div className="w-full h-[60vh] overflow-hidden ">
+            <div className="w-full px-16 flex-col lg:flex-row flex justify-between items-center h-full ">
                 <Carousel />
                 <div className="flex flex-col gap-[2px] text-center justify-center items-start">
                     <h1 className="font-bold text-3xl">Explore</h1>
@@ -27,7 +27,7 @@ function Carousel() {
         "Consult",
         "Analytics",
         "Quant",
-        "AI / ML",
+        "AI/ML",
         "Finance",
     ];
     let images = [
@@ -55,12 +55,12 @@ function Carousel() {
                 </button>
                 <div
                     id="carousel"
-                    className="w-[500px] h-[250px] bg-black overflow-hidden object-cover"
+                    className="lg:w-[500px] w-full h-[250px] bg-black overflow-hidden object-cover"
                 >
                     <img
                         src={images[currentImg % images.length]}
                         alt="Image"
-                        className="w-full object-cover"
+                        className="w-full object-cover h-full object-center"
                     />
                     ;
                 </div>

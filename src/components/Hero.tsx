@@ -16,32 +16,32 @@ export default function Hero() {
 function Background() {
     //I had to make this because somehow when I was exporting the svg from figma, the opacity of the svg was litte off
     return (
-        <>
+        <div>
             <img
                 src={HeroBg}
                 alt="Background Image"
-                className="absolute w-full -z-10 opacity-100"
+                className="absolute w-full -z-10  object-cover h-full"
             />{" "}
             <img
                 src={HeroBg}
                 alt="Background Image"
-                className="absolute w-full -z-10"
+                className="absolute w-full -z-10 object-cover  h-full"
             />{" "}
             <img
                 src={HeroBg}
                 alt="Background Image"
-                className="absolute w-full -z-10"
+                className="absolute w-full -z-10 object-cover h-full"
             />{" "}
             <img
                 src={HeroBg}
                 alt="Background Image"
-                className="absolute w-full -z-10"
+                className="absolute w-full -z-10 object-cover  h-full"
             />{" "}
             <img
                 src={HeroBg}
                 alt="Background Image"
-                className="absolute w-full -z-10"
+                className="absolute w-full -z-10 object-cover h-full"
             />
-        </>
+        </div>
     );
 }

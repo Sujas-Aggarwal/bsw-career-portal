@@ -4,10 +4,14 @@ import Explore from "./components/Explore";
 
 export default function App() {
     return (
-        <div>
+        <div >
             <Navbar />
-            <Hero/>
-            <Explore/>
+            <Hero />
+            <Gapdiv/>
+            <Explore />
         </div>
     );
+}
+function Gapdiv({ gap = 10 }: { gap?: number }) {
+    return <div className={`h-${gap}`}></div>;
 }
