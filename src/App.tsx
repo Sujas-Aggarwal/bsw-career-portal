@@ -7,11 +7,10 @@ export default function App() {
         <div >
             <Navbar />
             <Hero />
-            <Gapdiv/>
             <Explore />
         </div>
     );
 }
-function Gapdiv({ gap = 10 }: { gap?: number }) {
-    return <div className={`h-${gap}`}></div>;
-}
+// function Gapdiv({ gap = 10 }: { gap?: number }) {
+//     return <div className={`h-${gap}`}></div>;
+// }

@@ -2,12 +2,13 @@ import { useState } from "react";
 
 export default function Explore() {
     return (
-        <div className="w-full h-[60vh] overflow-hidden ">
-            <div className="w-full px-16 flex-col lg:flex-row flex justify-between items-center h-full ">
+        <div className="w-full min-h-[60vh] overflow-hidden md:py-10 pb-10">
+            <div className="w-full px-4  md:px-16 flex-col lg:flex-row flex justify-between items-center h-full ">
                 <Carousel />
-                <div className="flex flex-col gap-[2px] text-center justify-center items-start">
+                <div className="w-full bg-black h-1 my-10 mt-5 md:hidden"></div>
+                <div className=" flex flex-col gap-[2px] text-center justify-center items-start">
                     <h1 className="font-bold text-3xl">Explore</h1>
-                    <p className="max-w-[40ch] text-left">
+                    <p className="md:max-w-[40ch] text-left">
                         Explore different streams, verified statistics, exciting
                         opportunities and much more
                     </p>
@@ -33,7 +34,7 @@ function Carousel() {
     let images = [
         "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600",
         "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=600",
     ];
     const [currentImg, setCurrentImg] = useState<number>(0);
     return (
@@ -43,10 +44,10 @@ function Carousel() {
         >
             <div
                 id="carousel-window"
-                className="flex gap-6 justify-center items-center"
+                className="flex gap-1 md:gap-6 justify-center items-center"
             >
                 <button
-                    className="p-2"
+                    className="p-2 md:relative absolute left-0  md:invert-0 invert bg-black/10 md:bg-transparent"
                     onClick={() => {
                         setCurrentImg(currentImg - 1);
                     }}
@@ -55,7 +56,7 @@ function Carousel() {
                 </button>
                 <div
                     id="carousel"
-                    className="lg:w-[500px] w-full h-[250px] bg-black overflow-hidden object-cover"
+                    className="md:w-[500px] w-screen h-[200px] md:h-[250px] bg-black overflow-hidden object-cover"
                 >
                     <img
                         src={images[currentImg % images.length]}
@@ -65,7 +66,7 @@ function Carousel() {
                     ;
                 </div>
                 <button
-                    className="p-2"
+                    className="p-2 md:relative absolute right-0 md:invert-0 invert bg-black/10 md:bg-transparent"
                     onClick={() => {
                         setCurrentImg(currentImg + 1);
                     }}
@@ -73,7 +74,10 @@ function Carousel() {
                     <RightButton />
                 </button>
             </div>
-            <div id="carousel-items" className="flex w-full justify-evenly">
+            <div
+                id="carousel-items"
+                className="flex w-full md:justify-evenly justify-center items-center flex-wrap md:gap-0 gap-4"
+            >
                 {listItems.map((item, index) => {
                     return (
                         <span
