@@ -32,9 +32,13 @@ function Carousel() {
         "Finance",
     ];
     let images = [
-        "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "src/assets/core.png",
+        "src/assets/sde.png",
+        "src/assets/consult.png",
+        "src/assets/analytics.png",
+        "src/assets/analytics.png",
+        "src/assets/ai-ml.png",
+        "src/assets/analytics.png",
     ];
     const [currentImg, setCurrentImg] = useState<number>(0);
     return (
@@ -87,7 +91,15 @@ function Carousel() {
                             key={index}
                             className="nav-item-home cursor-pointer relative overflow-x-clip"
                         >
-                            {item}
+                            <span
+                                className={`${
+                                    currentImg % listItems.length === index
+                                        ? "font-bold"
+                                        : ""
+                                }`}
+                            >
+                                {item}
+                            </span>
                             <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px]  bottom-[-3px] bg-black"></span>
                         </span>
                     );
