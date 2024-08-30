@@ -29,7 +29,7 @@ export default function Explore() {
                             id="carousel"
                             className="md:w-[500px] w-screen h-[200px] md:h-[250px] bg-black overflow-hidden object-cover"
                         >
-                            <Link to={`/explore/${listItems[currentImg % listItems.length]}`}>
+                            <Link to={`/explore/${listItems[currentImg % listItems.length]}`} onClick={() => window.scrollTo(0, 0)}>
                                 <img
                                     src={profileData[listItems[currentImg % listItems.length] as keyof typeof profileData].cover_image}
                                     alt="Image"
@@ -85,7 +85,9 @@ export default function Explore() {
                     </p>
                     <div className="h-2"></div>
                     <button className="border-solid border-[2px] border-[#133748] py-[4px] px-2 hover:bg-[#133748] hover:text-white select-none">
-                        <Link to={`/explore/${listItems[currentImg % listItems.length]}`}>Read More</Link>
+                        <Link to={`/explore/${listItems[currentImg % listItems.length]}`} onClick={() => window.scrollTo(0, 0)}>
+                            Read More
+                        </Link>
                     </button>
                 </div>
             </div>

@@ -18,7 +18,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden md:flex justify-center items-center gap-8">
                     <span className="nav-item-home cursor-pointer relative overflow-x-clip">
-                        <a href="#explore">Explore</a>
+                        <a href="/#explore">Explore</a>
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
                     </span>
                     <span className="nav-item-home relative cursor-pointer overflow-x-clip">
@@ -64,14 +64,14 @@ export default function Navbar() {
                         Explore
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
                     </span>
-                    {/* <span className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip">
+                    <span className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip">
                         Build
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
                     </span>
                     <span className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip">
                         Prepare
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-                    </span> */}
+                    </span>
                     <span className="text-md cursor-pointer flex-grow text-center border-solid border-[2px] border-[#133748] py-[6px] px-4 rounded-full hover:bg-[#133748] hover:text-white select-none">
                         Counselling
                     </span>
