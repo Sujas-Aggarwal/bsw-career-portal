@@ -1,0 +1,72 @@
+{
+    "sde": {
+        "name": "SDE",
+        "name2": "Software Development Engineer",
+        "cover_image": "/src/assets/landing/sde.png",
+        "bg_image": "/src/assets/explore/sde-home-bg.svg",
+        "overview": "Before applying for any role, it’s important to understand why you want to do it and what will be required of you for this role. For a software engineering-based role, it’s necessary that you have the desire to build things from scratch, get your hands dirty with new technologies, be enthusiastic to learn new stuff all the time, and be able to apply it to new, impactful interfaces with real-time effects. If this sounds like you, then read on!",
+        "readmore": "Your journey begins with a 2-3 week learning phase at the company, focused on mastering key skills like web development and APIs, tailored to your role. During this time, clear communication with your mentor is essential as they guide you through the job’s nuances. While the post-placement period might bring some pressure, the overall atmosphere remains relaxed. As a software engineer, flexible hours are a significant perk, allowing you to work when it suits you best. Typically, you'll spend 4-5 hours a day working, leaving weekends free for personal activities and time with friends.<br/><br/><b>Daily tasks</b><ul style=\"list-style: inside;\"><li>Code a part of a software application</li><li>Run tests to ensure the software works as expected</li><li>Review code from another engineer</li><li>Work on optimizing the software speed and performance</li><li>Listen to the client or company to understand what new features they want</li><li>Stay up to date on software technology and upgrades</li></ul>",
+        "payscale": "Base Salary: ₹16-20 LPA<br/>CTC: ₹30-35 LPA",
+        "branches": "No strict preference. Relevant courses (especially in CS, MT, and EE) are crucial. Key courses include COL100, COL106, MTL342, and MTL103",
+        "skills": "Hard Skills: Strong foundation in Data Structures and Algorithms (DSA), competitive programming, and knowledge of web development or related fields.<br/>Soft Skills: Effective communication, teamwork, adaptability, and leadership",
+        "trajectory": "Career stability with many professionals staying 6-20 years in the role. Growth is smooth with promotions in 1-1.5 years. Options for career progression include moving into management or continuing as a senior developer",
+        "resume": "CGPA cutoff: Typically 7.5 (some companies may require 8).<br/>Key highlights: Programming assignments, especially from COL100/COL106, participation in hackathons, and self-driven projects in new tech stacks",
+        "companies": "Pure SDE Roles: Google, Microsoft, Uber, Amazon, Flipkart, Facebook, Adobe, Infosys, Samsung, LinkedIn, Dell, Intuit.<br/>SDE Roles in Finance: JPMC, Morgan Stanley, Goldman Sachs."
+    },
+    "quant": {
+        "name": "Quant",
+        "name2": "",
+        "cover_image": "/src/assets/landing/quant.png",
+        "bg_image": "/src/assets/explore/quant-home-bg.svg",
+        "overview": "Before applying for any role, it’s important to understand why you want to do it and what will be required of you for this role. A career in quantitative analysis is all about solving complex puzzles with a mix of mathematical, statistical, and programming skills. If you enjoy tackling challenging problems, analyzing data, and creating your own tools, then a Quant role might be the perfect fit for you.",
+        "readmore": "As a Quant, your typical day might involve:<ul style=\"list-style: inside;\"><li>Analyzing financial data using mathematical and statistical methods.</li><li>Developing algorithms and models to predict market trends.</li><li>Writing custom tools and software to process and clean messy data.</li><li>Collaborating with team leaders to work on projects that align with the company's strategic goals.</li><li>Continuously learning and applying new techniques in fields like data analysis, probability, and game theory.</li></ul>",
+        "payscale": "Median Joining Package: ₹25-35 LPA<br/>Quants typically receive higher compensation than most other fields, reflecting the high expectations and specialized skills required.",
+        "branches": "Preferred branches include CS1, CS5, MT1, MT6 (also consider electrical branches). However, a strong foundation in mathematics, probability, and statistics is crucial, regardless of the branch.",
+        "skills": "Exceptional coding skills, particularly in C++ and Python.<br/>Proficiency in Object-Oriented Programming, Data Analysis Techniques, and Statistical Methods.<br/>Strong problem-solving abilities, with a deep understanding of probability and game theory.",
+        "trajectory": "High-pressure environments with high rewards with potential job switches after a few years or transitions to tech.<br/>Significant pay hikes and complex problem-solving opportunities for those who excel.<br/>Paths include further specialization or shifts to tech/finance roles",
+        "resume": "<ul style=\"list-style: inside;\"><li>Strong CGPA or department rank.</li><li>Projects in coding and quantitative analysis.</li><li>Competitive programming experience.</li><li>Hackathons or self-driven projects showcasing problem-solving skills.</li></ul>",
+        "companies": "Elite Quant Firms: Tower Research Capital, Optiver, Jane Street, Citadel Securities, Quadeye, Alphagrep, Graviton, NK Securities.<br/>Finance Giants with Quant Roles: JP Morgan Chase, Goldman Sachs."
+    },
+    "core": {
+        "name": "Core",
+        "name2": "(Electrical Engineering)",
+        "cover_image": "/src/assets/landing/core.png",
+        "bg_image": "/src/assets/explore/default-home-bg.svg",
+        "overview": "If you have a passion for Electrical Engineering (EE) courses and enjoy hands-on circuit and chip design, a Core Electrical profile could be ideal for you. This role involves designing, simulating, and fabricating advanced circuits for various applications, such as digital processors, power electronic converters, and RF/Mixed Signal systems. If you’re excited by creating and optimizing hardware and have a keen interest in cutting-edge technology, read on!",
+        "readmore": "Your role starts with designing and engineering hardware for specific applications. As you gain experience, tasks become more specialized. Key roles include Analog/RFIC/Mixed Signal Design Engineer, Digital Design Engineer, Physical Design/Verification Engineer, and Powertrain Designer. Software Engineers in this domain work with embedded systems, programming boards, and developing testing platforms. While company cultures vary, they generally offer a supportive environment with manageable stress levels. <br/><br/><b>Daily tasks</b><ul style=\"list-style: inside;\"><li>Design and optimize circuits for various applications</li><li>Simulate and test hardware components</li><li>Work on embedded systems and programming (for Software Engineers)</li><li>Collaborate with teams on complex projects</li></ul>",
+        "payscale": "Base Salary: ₹20-50 LPA (varies by role and skills)<br/>Internships: ₹40K-80K per month",
+        "branches": "Primarily EE, but CS, EP (in some companies), and MT students with relevant skills are also considered.",
+        "skills": "Hard Skills: Circuit Design, Digital Electronics, Programming.<br/>Key courses include Digital Electronics, Circuit Theory, Control Systems, and Analog Electronic Circuits",
+        "trajectory": "Career growth starts gradually but becomes highly rewarding with experience. Engineers often advance to lead roles within 8-10 years.<br/>The expanding semiconductor industry in India offers stable and lucrative long-term career opportunities.",
+        "resume": "<ul style=\"list-style: inside;\"><li>Relevant EE projects and internships (research or corporate)</li><li>CGPA of 7-7.5+ is generally sufficient; some companies may require 8+.</li><li>Strong technical knowledge and relevant projects are prioritized over extracurricular activities.</li></ul>",
+        "companies": "Nvidia, Texas Instruments, Qualcomm, Intel, Jaguar, Land Rover, MediaTek, Cadence"
+    },
+    "finance": {
+        "name": "Finance",
+        "name2": "(Analytics)",
+        "cover_image": "/src/assets/landing/quant.png",
+        "bg_image": "/src/assets/explore/quant-home-bg.svg",
+        "overview": "A career in finance involves managing and analyzing financial data, making strategic decisions, and helping businesses achieve their financial goals. Whether you're interested in investment banking, private equity, or finance within a tech company, understanding the demands and rewards of the field is crucial. If you’re ready for a challenging yet rewarding career with diverse opportunities, finance might be the right fit for you!",
+        "readmore": "In finance, daily activities vary based on the specific role. In investment banking, expect long hours (80-100 per week) dealing with high-stakes deals and rigorous analyses. Private equity roles involve around 80 hours a week, with more intensive periods during active deals. Finance roles in tech companies generally offer a better work-life balance, with 40-50 hours a week. The day involves reviewing financial reports, conducting market analysis, and preparing presentations for stakeholders. The role demands strong analytical skills, attention to detail, and adaptability to fast-paced environments.<br/><br/><b>Daily Tasks</b><ul style=\"list-style: inside;\"><li>Analyze financial data and create financial models</li><li>Prepare and present reports to senior management</li><li>Monitor market trends and financial performance</li><li>Collaborate with other departments and clients</li></ul>",
+        "payscale": "Joining PayScale: ₹10-30 LPA (varies by role and company)",
+        "branches": "No specific branch preference; relevant coursework and experience are more important.",
+        "skills": "Hard Skills: Strong analytical and quantitative skills, and knowledge of programming languages.<br/>Soft Skills: Analytical thinking and effective communication",
+        "trajectory": "The finance sector in India is growing, with increasing economic activity and foreign investments. Career prospects are strong, with opportunities for advancement into senior roles or specializations in areas like investment banking or private equity.",
+        "resume": "<ul style=\"list-style: inside;\"><li>Strong CGPA</li><li>Finance-related projects and coursework</li><li>Relevant internships or work experience</li></ul>",
+        "companies": "Goldman Sachs, Morgan Stanley, American Express, NK Securities, J.P. Morgan Chase, Barclays, DMI Finance, Alphagrep Securities, Piramal, Quadria"
+    },
+    "ai-ml": {
+        "name": "AI/ML",
+        "name2": "Artificial Intelligence/Machine Learning",
+        "cover_image": "/src/assets/landing/ai-ml.png",
+        "bg_image": "/src/assets/explore/default-home-bg.svg",
+        "overview": "If you’re fascinated by algorithms, data, and the transformative power of AI/ML, you’re in the right place. AI/ML roles involve developing advanced algorithms, creating intelligent systems, and enhancing decision-making processes through data. This field offers a mix of theoretical and practical challenges, perfect for those eager to solve real-world problems with cutting-edge technology.",
+        "readmore": "In AI/ML, your journey starts with grasping foundational concepts and applying them to practical problems. For beginners, start with online resources like Coursera’s Deep Learning Specialization and courses like COL774 for advanced mathematical insights. Practice your skills on platforms like Kaggle, engage with deep learning concepts through blogs and courses, and work on projects with professors or companies. Projects offer hands-on experience, which is crucial for deep learning and AI research.<br/><br/><b>Daily Tasks</b><ul style=\"list-style: inside;\"><li>Researchers<ul style=\"list-style: circle inside; margin-left:15px\">\t<li>Review latest papers and advancements</li><li>Conduct literature surveys and team meetings</li><li>Design, code, and refine experiments using Python libraries (e.g., TensorFlow, PyTorch)</li><li>Analyze results to improve models and algorithms</li></ul></li><li>Industry Experts</li><ul style=\"list-style: circle inside; margin-left:15px\"><li>Focus on coding and implementing AI/ML systems</li><li>Develop and optimize AI models for practical applications</li><li>Less emphasis on literature reviews, more on real-world problem-solving</li></ul></ul>",
+        "payscale": "Median Joining Package: Data varies; typically high in leading tech companies and research institutions.",
+        "branches": "Research Roles: MT, CS, EE<br/>Application Roles: Open to all branches, though MT/CS/EE students might be preferred for core ML research.",
+        "skills": "Hard Skills: Deep Learning, Large Language Models (LLMs), Optimization, Machine Learning, Linear Algebra, Python",
+        "trajectory": "AI/ML careers offer rapid growth and substantial rewards. As you gain experience, you’ll have opportunities to lead projects, drive innovation, and influence AI strategies in diverse fields like healthcare, finance, and autonomous systems.",
+        "resume": "<ul style=\"list-style: inside;\"><li>Projects in AI/ML</li><li>Strong CGPA and department rank</li></ul>",
+        "companies": "Industry Leaders: Google DeepMind, OpenAI, IBM Watson, Amazon AI, Facebook AI Research (FAIR), NVIDIA AI, Microsoft AI and Research"
+    }
+}
