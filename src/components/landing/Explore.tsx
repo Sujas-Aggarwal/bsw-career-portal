@@ -4,7 +4,7 @@ import profileData from "../../assets/profiles.json";
 
 export default function Explore() {
     let listItems = Object.keys(profileData);
-    const [currentImg, setCurrentImg] = useState<number>(0);
+    const [currentImg, setCurrentImg] = useState<number>(Math.floor(Math.random()*6));
 
     return (
         <div className="w-full min-h-[60vh] overflow-hidden md:py-10 pb-10" id="explore">
