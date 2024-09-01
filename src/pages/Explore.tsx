@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Explore from "../components/explore/Explore";
+import Main from "../components/explore/Main";
 import Hero from "../components/explore/Hero";
 import { useParams } from "react-router-dom";
 
@@ -10,7 +10,7 @@ export default function ExplorePage() {
         <div>
             <Navbar />
             <Hero profileName={profileName} />
-            <Explore profileName={profileName} />
+            <Main profileName={profileName} />
         </div>
     );
 }

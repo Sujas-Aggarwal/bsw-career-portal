@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import profileData from "../../assets/profiles.json";
 
-export default function Explore({ profileName }: { profileName: string|undefined }) {
+export default function Main({ profileName }: { profileName: string|undefined }) {
     const profile = profileData[profileName as keyof typeof profileData];
     const [readMore, setReadMore] = useState<boolean>(false);
 
@@ -63,10 +63,10 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
         <div className="w-full md:min-h-[calc(100vh-64px)] min-h-[calc(50vh-32px)] bg-[#133748] py-4 md:py-12 flex flex-col justify-between relative">
             <h2 className="text-4xl md:text-6xl font-bold mb-[0.1rem] md:mb-12 text-center text-white leading-[1.3]">FAQs</h2>
             {isSmallScreen ? (
-                <div className="relative flex justify-center items-center flex-1 mx-4 md:mx-2">
+                <div className="relative flex justify-center items-center flex-1 m-5 md:mx-2">
                     {/* Left Carousel Button */}
                     <button
-                        className="absolute left-4 p-2 bg-black rounded-full opacity-75 hover:opacity-100 z-10"
+                        className="absolute left-0 p-2 bg-black rounded-full opacity-75 hover:opacity-100 z-10"
                         onClick={handlePrev}
                         aria-label="Previous"
                     >
@@ -76,16 +76,16 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
                     <div className="w-full overflow-hidden">
                         <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                             {faqItems.map((faq, index) => (
-                                <div key={index} className="min-w-full p-2 bg-white rounded-2xl text-center text-black shadow-lg h-[75px] md:h-[140px]"> {/* Decreased height to half */}
+                                <div key={index} className="min-w-[80%] mx-[10%] my-auto py-4 px-5 bg-white rounded-2xl text-left text-black shadow-lg md:h-[140px]"> {/* Decreased height to half */}
                                     <h3 className="font-bold text-sm md:text-lg leading-[1.2]">{faq.question}</h3>
-                                    <p className="text-xs md:text-sm leading-[1.4]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                                    <p className="text-xs pt-2 md:text-sm leading-[1.4]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                                 </div>
                             ))}
                         </div>
                     </div>
                     {/* Right Carousel Button */}
                     <button
-                        className="absolute right-4 p-2 bg-black rounded-full opacity-75 hover:opacity-100 z-10"
+                        className="absolute right-0 p-2 bg-black rounded-full opacity-75 hover:opacity-100 z-10"
                         onClick={handleNext}
                         aria-label="Next"
                     >
@@ -97,7 +97,7 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
                     {faqItems.map((faq, index) => (
                         <div key={index} className="p-2 md:p-3 bg-white rounded-2xl shadow-lg">
                             <h3 className="font-bold text-sm md:text-lg text-black leading-[1.2] md:leading-[1.5]">{faq.question}</h3>
-                            <p className="text-xs md:text-sm text-black leading-[1.4] md:leading-[1.8]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                            <p className="text-xs pt-2 md:text-sm text-black leading-[1.4] md:leading-[1.8]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </div>
                     ))}
                 </div>
