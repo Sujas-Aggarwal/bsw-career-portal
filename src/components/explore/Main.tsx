@@ -8,20 +8,20 @@ export default function Main({ profileName }: { profileName: string|undefined })
 
     return (
         <div className="w-full min-h-[60vh] overflow-hidden py-16 bg-white">
-            <div className="w-full px-4 md:px-16 flex-col flex justify-center items-center h-full text-center">
+            <div className="w-full px-8 md:px-16 flex-col flex justify-center items-center h-full">
                 <div className="flex flex-col items-center gap-8">
-                    <h1 className="font-bold text-4xl md:text-5xl leading-[1.3]">
+                    <h1 className="font-bold text-center text-4xl md:text-5xl">
                         Overview
                     </h1>
-                    <p className="text-lg md:text-xl max-w-[600px] leading-[1.8]">
+                    <p className="text-xl md:text-xl md:text-center max-w-[600px] leading-[1.6]">
                         {profile.overview}
                     </p>
-                    <button className="mt-6 border-solid border-2 border-black py-3 px-6 hover:bg-black hover:text-white" onClick={() => setReadMore(!readMore)}>
-                        Read More
-                    </button>
-                    <div className={`max-w-[600px] text-left ${readMore ? "block" : "hidden"}`}>
-                        <p className="text-lg md:text-xl leading-[1.8]" dangerouslySetInnerHTML={{ __html: profile.readmore }} />
+                    <div className={`max-w-[600px] md:text-center ${readMore ? "block" : "hidden"}`}>
+                        <p className="text-xl md:text-xl leading-[1.6]" dangerouslySetInnerHTML={{ __html: profile.readmore }} />
                     </div>
+                    <button className="mt-6 border-solid border-2 border-[#133748] py-3 px-6 hover:bg-[#133748] hover:text-white" onClick={() => setReadMore(!readMore)}>
+                        Read {readMore ? "Less" : "More"}
+                    </button>
                 </div>
             </div>
             <div className="mt-24">
@@ -61,9 +61,9 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
 
     return (
         <div className="w-full md:min-h-[calc(100vh-64px)] min-h-[calc(50vh-32px)] bg-[#133748] py-4 md:py-12 flex flex-col justify-between relative">
-            <h2 className="text-4xl md:text-6xl font-bold mb-[0.1rem] md:mb-12 text-center text-white leading-[1.3]">FAQs</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-8 md:my-10 text-center text-white">FAQs</h2>
             {isSmallScreen ? (
-                <div className="relative flex justify-center items-center flex-1 m-5 md:mx-2">
+                <div className="relative flex justify-center items-center flex-1 m-2 md:mx-2">
                     {/* Left Carousel Button */}
                     <button
                         className="absolute left-0 p-2 bg-black rounded-full opacity-75 hover:opacity-100 z-10"
@@ -77,8 +77,8 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
                         <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                             {faqItems.map((faq, index) => (
                                 <div key={index} className="min-w-[80%] mx-[10%] my-auto py-4 px-5 bg-white rounded-2xl text-left text-black shadow-lg md:h-[140px]"> {/* Decreased height to half */}
-                                    <h3 className="font-bold text-sm md:text-lg leading-[1.2]">{faq.question}</h3>
-                                    <p className="text-xs pt-2 md:text-sm leading-[1.4]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                                    <h3 className="font-bold text-lg leading-[1.2]">{faq.question}</h3>
+                                    <p className="text-base pt-2 leading-[1.4]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                                 </div>
                             ))}
                         </div>
@@ -93,11 +93,11 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
                     </button>
                 </div>
             ) : (
-                <div className="grid md:grid-cols-3 gap-4 md:gap-8 px-4 md:px-12 flex-1">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 px-4 md:px-12 flex-1">
                     {faqItems.map((faq, index) => (
-                        <div key={index} className="p-2 md:p-3 bg-white rounded-2xl shadow-lg">
-                            <h3 className="font-bold text-sm md:text-lg text-black leading-[1.2] md:leading-[1.5]">{faq.question}</h3>
-                            <p className="text-xs pt-2 md:text-sm text-black leading-[1.4] md:leading-[1.8]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                        <div key={index} className="p-2 md:p-6 bg-white rounded-2xl shadow-lg">
+                            <h3 className="font-bold text-lg leading-[1.5]">{faq.question}</h3>
+                            <p className="pt-2 text-base leading-[1.5]" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </div>
                     ))}
                 </div>

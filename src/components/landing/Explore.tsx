@@ -8,7 +8,7 @@ export default function Explore() {
 
     return (
         <div className="w-full min-h-[60vh] overflow-hidden md:py-10 pb-10" id="explore">
-            <div className="w-full px-4  md:px-16 flex-col lg:flex-row flex justify-between items-center h-full ">
+            <div className="w-full px-4  md:px-16 flex-col lg:flex-row flex justify-evenly items-center h-full ">
                 <div
                     id="carousel-box"
                     className="flex flex-col justify-center items-center gap-4"
