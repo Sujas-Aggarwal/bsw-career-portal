@@ -1,9 +1,9 @@
-import cvImage from './Image/cv.jpg';
-import offImage from './Image/off.jpg';
-import foreignImage from './Image/foreign.jpg';
-import hiddenImage from './Image/hidden.jpg';
-import schImage from './Image/sch.jpg';
-import researchImage from './Image/research.jpg';
+import cvImage from '../../assets/landing/cv.jpg';
+import offImage from '../../assets/landing/off.jpg';
+import foreignImage from '../../assets/landing/foreign.jpg';
+import hiddenImage from '../../assets/landing/hidden.jpg';
+import schImage from '../../assets/landing/sch.jpg';
+import researchImage from '../../assets/landing/research.jpg';
 
 const BuildProfile = () => {
     return (

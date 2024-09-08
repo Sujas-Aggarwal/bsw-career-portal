@@ -1,4 +1,4 @@
-import yosemiteValleyImage from './Image/yosemite-valley.jpg'; // Import the local image
+import yosemiteValleyImage from '../../assets/landing/yosemite-valley.jpg';
 
 const HandsOnExposure = () => {
     return ( 
