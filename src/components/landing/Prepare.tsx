@@ -1,6 +1,6 @@
 import resourceImage1 from '../../assets/landing/Resource.jpg'; // Replace with the correct file name
 import resourceImage2 from '../../assets/landing/HR.jpg'; // Replace with the correct file name
-import resourceImage3 from '../../assets/landing/interview.jpg'; // Replace with the correct file name
+import resourceImage3 from '../../assets/landing/Interview.jpg'; // Replace with the correct file name
 
 const Prepare = () => {
     return (
