@@ -2,7 +2,7 @@ import cvImage from '../../assets/landing/cv.jpg';
 import offImage from '../../assets/landing/off.jpg';
 import foreignImage from '../../assets/landing/foreign.jpg';
 import hiddenImage from '../../assets/landing/hidden.jpg';
-import schImage from '../../assets/landing/sch.jpg';
+import schImage from '../../assets/landing/Sch.jpg';
 import researchImage from '../../assets/landing/research.jpg';
 
 const BuildProfile = () => {
