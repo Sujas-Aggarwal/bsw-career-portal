@@ -53,6 +53,7 @@ export default function Navbar() {
               </span>
               {activeDropDown === item.toLowerCase() && (
                 <DropDownMenu
+                  NavItems={NavItems}
                   DropDownItems={DropDownItems}
                   closeDropdown={closeDropdown}
                   activeSection={item.toLowerCase()}
@@ -129,14 +130,24 @@ function DropDownMenu({
   closeDropdown,
   activeSection,
   isDesktop = false,
+  NavItems = [],
 }: {
   DropDownItems: string[];
   closeDropdown: () => void;
   activeSection: string;
   isDesktop?: boolean;
+  NavItems?: string[];
 }): JSX.Element {
   return (
     <div
+      style={{
+        left:
+          NavItems.findIndex(
+            (item) => item.toLowerCase() === activeSection.toLowerCase()
+          ) *
+            80 +
+          "px",
+      }}
       className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-[200px] overflow-hidden"
       onMouseLeave={closeDropdown}
     >
