@@ -3,18 +3,27 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeDropDown, setActiveDropDown] = useState("");
+  const NavItems = ["Explore", "Build", "Resources"];
+  const DropDownItems = [
+    "SDE",
+    "Quant",
+    "Core",
+    "Finance",
+    "AI-ML",
+    "Consulting",
+  ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const openDropdown = () => {
-    setIsDropdownOpen(true);
+  const openDropdown = (activeDropDown: string) => {
+    setActiveDropDown(activeDropDown.toLowerCase());
   };
 
   const closeDropdown = () => {
-    setIsDropdownOpen(false);
+    setActiveDropDown("");
   };
 
   return (
@@ -30,80 +39,27 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex justify-center items-center gap-8 relative">
           {/* Explore Button with Dropdown */}
-          <span
-            className="nav-item-home cursor-pointer relative overflow-x-clip"
-            onMouseEnter={openDropdown}
-          >
-            <span>Explore</span>
-            {/* Static Dropdown Menu */}
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-          </span>
-          {isDropdownOpen && (
-            <div
-              className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-[200px]"
-              onMouseLeave={closeDropdown}
-            >
-              <ul className="flex flex-col text-left">
-                <li>
-                  <Link
-                    to="/explore/sde"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    SDE
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/explore/quant"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Quant
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/explore/core"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Core
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/explore/finance"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Finance
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/explore/ai-ml"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    AI-ML
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/explore/consult"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Consulting
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-          {/* Other Navbar Items */}
-          <span className="nav-item-home relative cursor-pointer overflow-x-clip">
-            Build
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-          </span>
-          <span className="nav-item-home relative cursor-pointer overflow-x-clip">
-            Prepare
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-          </span>
+          {NavItems.map((item, index) => (
+            <>
+              <span
+                key={index}
+                className="nav-item-home cursor-pointer relative overflow-x-clip"
+                onMouseEnter={() => {
+                  openDropdown(item.toLowerCase());
+                }}
+              >
+                <span>{item}</span>
+                <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
+              </span>
+              {activeDropDown === item.toLowerCase() && (
+                <DropDownMenu
+                  DropDownItems={DropDownItems}
+                  closeDropdown={closeDropdown}
+                  activeSection={item.toLowerCase()}
+                />
+              )}
+            </>
+          ))}
           <span className="cursor-pointer border-solid border-[2px] border-[var(--theme-color)] py-[6px] px-4 rounded-full hover:bg-[var(--theme-color)] hover:text-white select-none">
             <a href="https://bsw.iitd.ac.in/counselling.php">Counselling</a>
           </span>
@@ -136,80 +92,65 @@ export default function Navbar() {
         } md:hidden bg-[#EDEDED] text-center shadow-md shadow-black/10`}
       >
         <div className="flex flex-row items-center justify-between px-2 py-4">
-          <span
-            onClick={isDropdownOpen ? closeDropdown : openDropdown}
-            className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip"
+          {NavItems.map((item, index) => (
+            <span
+              key={index}
+              onClick={() => {
+                activeDropDown === item.toLowerCase()
+                  ? closeDropdown
+                  : openDropdown(item.toLowerCase());
+              }}
+              className="text-md nav-item-home cursor-pointer flex-grow text-center relative "
+            >
+              {item}
+              {activeDropDown === item.toLowerCase() && (
+                <DropDownMenu
+                  DropDownItems={DropDownItems}
+                  closeDropdown={closeDropdown}
+                  activeSection={item.toLowerCase()}
+                />
+              )}
+            </span>
+          ))}
+          <a
+            className="text-md cursor-pointer flex-grow text-center border-solid border-[2px] border-[var(--theme-color)] py-[6px] px-4 rounded-full hover:bg-[var(--theme-color)] hover:text-white select-none"
+            href="https://bsw.iitd.ac.in/counselling.php"
           >
-            Explore
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-            {isDropdownOpen && (
-              <div className="absolute z-[1000] left-[-10px] top-full mt-2 bg-white shadow-md rounded-md w-[200px] text-sm">
-                <ul className="flex flex-col text-left">
-                  <li>
-                    <Link
-                      to="/explore/sde"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      SDE
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/explore/quant"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Quant
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/explore/core"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Core
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/explore/finance"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Finance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/explore/ai-ml"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      AI-ML
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/explore/consult"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Consulting
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </span>
-          <span className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip">
-            Build
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-          </span>
-          <span className="text-md nav-item-home cursor-pointer flex-grow text-center relative overflow-x-clip">
-            Prepare
-            <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
-          </span>
-          <span className="text-md cursor-pointer flex-grow text-center border-solid border-[2px] border-[var(--theme-color)] py-[6px] px-4 rounded-full hover:bg-[var(--theme-color)] hover:text-white select-none">
             Counselling
-          </span>
+          </a>
         </div>
       </div>
+    </div>
+  );
+}
+
+function DropDownMenu({
+  DropDownItems,
+  closeDropdown,
+  activeSection,
+  isDesktop = false,
+}: {
+  DropDownItems: string[];
+  closeDropdown: () => void;
+  activeSection: string;
+  isDesktop?: boolean;
+}): JSX.Element {
+  return (
+    <div
+      className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-[200px] overflow-hidden"
+      onMouseLeave={closeDropdown}
+    >
+      <ul className="flex flex-col text-left ">
+        {DropDownItems.map((item, index) => (
+          <Link
+            to={`/${activeSection}/${item.toLowerCase()}`}
+            key={index}
+            className="block px-4 py-2 hover:bg-gray-100"
+          >
+            {item}
+          </Link>
+        ))}
+      </ul>
     </div>
   );
 }
