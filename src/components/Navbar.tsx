@@ -18,10 +18,10 @@ export default function Navbar() {
     };
 
     return (
-        <div className="w-full z-10 h-[50px] md:h-[70px] bg-[#EDEDED] text-[#133748] font-[Poppins] fixed shadow-lg shadow-black/10">
+        <div className="w-full z-10 h-[50px] md:h-[70px] bg-[#EDEDED] text-[var(--theme-color)] font-[Poppins] fixed shadow-lg shadow-black/10">
             <div className="w-full h-full flex justify-between px-6 md:px-10 items-center">
                 <div id="left-box">
-                    <h1 className="text-2xl md:text-3xl font-extrabold cursor-pointer">
+                    <h1 className="text-sm sm:text-2xl md:text-3xl font-extrabold cursor-pointer">
                         <Link to="/">BSW Career Mentorship</Link>
                     </h1>
                 </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
                         Prepare
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
                     </span>
-                    <span className="cursor-pointer border-solid border-[2px] border-[#133748] py-[6px] px-4 rounded-full hover:bg-[#133748] hover:text-white select-none">
+                    <span className="cursor-pointer border-solid border-[2px] border-[var(--theme-color)] py-[6px] px-4 rounded-full hover:bg-[var(--theme-color)] hover:text-white select-none">
                         <a href="https://bsw.iitd.ac.in/counselling.php">Counselling</a>
                     </span>
                 </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
                         Prepare
                         <span className="w-full transition-all duration-250 left-[-100%] absolute h-[2px] bottom-[-3px] bg-black"></span>
                     </span>
-                    <span className="text-md cursor-pointer flex-grow text-center border-solid border-[2px] border-[#133748] py-[6px] px-4 rounded-full hover:bg-[#133748] hover:text-white select-none">
+                    <span className="text-md cursor-pointer flex-grow text-center border-solid border-[2px] border-[var(--theme-color)] py-[6px] px-4 rounded-full hover:bg-[var(--theme-color)] hover:text-white select-none">
                         Counselling
                     </span>
                 </div>

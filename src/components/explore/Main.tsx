@@ -19,7 +19,7 @@ export default function Main({ profileName }: { profileName: string|undefined })
                     <div className={`max-w-[600px] md:text-center ${readMore ? "block" : "hidden"}`}>
                         <p className="text-xl md:text-xl leading-[1.6]" dangerouslySetInnerHTML={{ __html: profile.readmore }} />
                     </div>
-                    <button className="mt-6 border-solid border-2 border-[#133748] py-3 px-6 hover:bg-[#133748] hover:text-white" onClick={() => setReadMore(!readMore)}>
+                    <button className="mt-6 border-solid border-2 border-[var(--theme-color)] py-3 px-6 hover:bg-[var(--theme-color)] hover:text-white" onClick={() => setReadMore(!readMore)}>
                         Read {readMore ? "Less" : "More"}
                     </button>
                 </div>
@@ -60,7 +60,7 @@ function FAQs({ profile }: { profile: typeof profileData[keyof typeof profileDat
     };
 
     return (
-        <div className="w-full md:min-h-[calc(100vh-64px)] min-h-[calc(50vh-32px)] bg-[#133748] py-4 md:py-12 flex flex-col justify-between relative">
+        <div className="w-full md:min-h-[calc(100vh-64px)] min-h-[calc(50vh-32px)] bg-[var(--theme-color)] py-4 md:py-12 flex flex-col justify-between relative">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-8 md:my-10 text-center text-white">FAQs</h2>
             {isSmallScreen ? (
                 <div className="relative flex justify-center items-center flex-1 m-2 md:mx-2">

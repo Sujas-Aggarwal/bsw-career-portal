@@ -2,7 +2,7 @@ import HeroBg from "../../assets/landing/home-bg.svg";
 
 export default function Hero() {
     return (
-        <div className="h-screen flex  relative overflow-hidden md:bg-transparent bg-[#133748]">
+        <div className="h-screen flex  relative overflow-hidden md:bg-transparent bg-[var(--theme-color)]">
             <Background />
             <div className="flex flex-col text-center justify-center items-center gap-[6px] text-white  md:pl-[10vw] md:pt-[10vh] p-2">
                 <img src="/logo.png" alt="" className="md:hidden w-[60%] mb-4"/>

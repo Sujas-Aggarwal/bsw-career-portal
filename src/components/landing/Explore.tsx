@@ -84,7 +84,7 @@ export default function Explore() {
                         opportunities and much more
                     </p>
                     <div className="h-2"></div>
-                    <button className="border-solid border-[2px] border-[#133748] py-[4px] px-2 hover:bg-[#133748] hover:text-white select-none">
+                    <button className="border-solid border-[2px] border-[var(--theme-color)] py-[4px] px-2 hover:bg-[var(--theme-color)] hover:text-white select-none">
                         <Link to={`/explore/${listItems[currentImg % listItems.length]}`} onClick={() => window.scrollTo(0, 0)}>
                             Read More
                         </Link>

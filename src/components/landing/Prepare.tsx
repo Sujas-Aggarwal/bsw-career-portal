@@ -4,27 +4,27 @@ import resourceImage3 from '../../assets/landing/Interview.jpg'; // Replace with
 
 const Prepare = () => {
     return (
-        <div className="w-full flex p-10 bg-[#0E2F3F]">
-            <div className="flex w-[40vw] flex-col my-auto gap-4 pl-10 mx-auto text-white">
-                <h3 className="text-[50px]">HANDS-ON EXPOSURE</h3>
-                <p className="max-w-150 text-[25px]">Invaluable resources to prepare you for your dream career</p>
-                <button className="border-[#fff] border-4 mx-auto px-4 py-2">READ MORE</button>
+        <div className="w-full py-20 flex flex-col md:flex-row md:p-10 bg-[var(--theme-color)]">
+            <div className="flex w-full md:w-[40vw] flex-col my-auto gap-1 pl-10 mx-auto text-white">
+                <h3 className="text-[30px] font-[Poppins]">Hands-on Experience</h3>
+                <p className="max-w-150">Invaluable resources to prepare you for your dream career</p>
+                <button className="border-[#fff] hover:bg-white hover:text-[var(--theme-color)] border-2 mr-auto px-3 py-1 mt-2">Read More</button>
             </div>
-            <div className="grid grid-cols-3 px-10 gap-10 w-[60vw]">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:px-10 pt-10 md:pt-0 gap-10 mx-auto w-[80%] md:w-[60vw]">
                 {/* Box 1 */}
-                <div className="aspect-square relative rounded-2xl overflow-hidden">
-                    <img src={resourceImage1} alt="Resource 1" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-4 text-black left-0 right-0 w-full text-center bold">RESOURCES</div>
+                <div className="aspect-square relative rounded-2xl ">
+                    <img src={resourceImage1} alt="Resource 1" className="w-full rounded-3xl h-full object-contain object-center" />
+                    <div className="absolute  font-[Poppins] bottom-[-30px] text-white left-0 right-0 w-full text-center bold">Resources</div>
                 </div>
                 {/* Box 2 */}
-                <div className="aspect-square relative rounded-2xl overflow-hidden">
-                    <img src={resourceImage2} alt="Resource 2" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-4 text-black left-0 right-0 w-full text-center bold">HR PREP</div>
+                <div className="aspect-square relative rounded-2xl ">
+                    <img src={resourceImage2} alt="Resource 2" className="w-full rounded-3xl h-full object-contain object-center" />
+                    <div className="absolute  font-[Poppins] bottom-[-30px] text-white left-0 right-0 w-full text-center bold">HR Prep</div>
                 </div>
                 {/* Box 3 */}
-                <div className="aspect-square relative rounded-2xl overflow-hidden">
-                    <img src={resourceImage3} alt="Resource 3" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-4 text-black left-0 right-0 w-full text-center bold">INTERVIEW PREP</div>
+                <div className="aspect-square relative rounded-2xl ">
+                    <img src={resourceImage3} alt="Resource 3" className="w-full rounded-3xl h-full object-contain object-center" />
+                    <div className="absolute  font-[Poppins] bottom-[-30px] text-white left-0 right-0 w-full text-center bold">Interview Prep</div>
                 </div>
             </div>
         </div>
