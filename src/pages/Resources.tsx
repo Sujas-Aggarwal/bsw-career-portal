@@ -16,11 +16,11 @@ function Resources() {
   return (
     <div>
       <Hero profileName={profileName} />
-      <Main profileName={profileName} />
+      <MainResource profileName={profileName} />
     </div>
   );
 }
-function Main({ profileName }: { profileName: string | undefined }) {
+export function MainResource({ profileName }: { profileName: string | undefined }) {
   const profile = profileData[profileName as keyof typeof profileData];
   return (
     <div className="w-full flex flex-col justify-center items-center px-10 py-20">

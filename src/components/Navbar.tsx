@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden md:flex justify-center items-center gap-8 relative">
           {/* Explore Button with Dropdown */}
           {NavItems.map((item, index) => (
-            <>
+            < >
               <span
                 key={index}
                 className="nav-item-home cursor-pointer relative overflow-x-clip"

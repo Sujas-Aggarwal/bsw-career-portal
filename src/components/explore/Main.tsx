@@ -38,7 +38,7 @@ export default function Main({
   );
 }
 
-function FAQs({
+export function FAQs({
   profile,
 }: {
   profile: (typeof profileData)[keyof typeof profileData];
