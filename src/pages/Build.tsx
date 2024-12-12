@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { setMetadata } from "../utils/seo";
 import Hero from "../components/explore/Hero";
