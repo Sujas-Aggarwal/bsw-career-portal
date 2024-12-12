@@ -129,13 +129,11 @@ function DropDownMenu({
   DropDownItems,
   closeDropdown,
   activeSection,
-  isDesktop = false,
   NavItems = [],
 }: {
   DropDownItems: string[];
   closeDropdown: () => void;
   activeSection: string;
-  isDesktop?: boolean;
   NavItems?: string[];
 }): JSX.Element {
   return (
