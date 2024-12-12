@@ -7,9 +7,9 @@ export default function Main({ profileName }: { profileName: string|undefined })
     const [readMore, setReadMore] = useState<boolean>(false);
 
     return (
-        <div className="w-full min-h-[60vh] overflow-hidden py-16 bg-white">
+        <div className="w-full  overflow-hidden pt-16 bg-white">
             <div className="w-full px-8 md:px-16 flex-col flex justify-center items-center h-full">
-                <div className="flex flex-col items-center gap-8">
+                <div className="flex flex-col items-center  text-center gap-8">
                     <h1 className="font-bold text-center text-4xl md:text-5xl">
                         Overview
                     </h1>

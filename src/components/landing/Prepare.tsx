@@ -4,7 +4,7 @@ import resourceImage3 from '../../assets/landing/Interview.jpg'; // Replace with
 
 const Prepare = () => {
     return (
-        <div className="w-full py-20 flex flex-col md:flex-row md:p-10 bg-[var(--theme-color)]">
+        <div className="w-full overflow-hidden  flex flex-col md:flex-row md:p-10 py-20 md:py-20 bg-[var(--theme-color)]">
             <div className="flex w-full md:w-[40vw] flex-col my-auto gap-1 pl-10 mx-auto text-white">
                 <h3 className="text-[30px] font-[Poppins]">Hands-on Experience</h3>
                 <p className="max-w-150">Invaluable resources to prepare you for your dream career</p>
