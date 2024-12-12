@@ -69,7 +69,7 @@
         "resume": "<ul style=\"list-style: outside; margin-left: 15px;\"><li>Projects in AI/ML</li><li>Strong CGPA and department rank</li></ul>",
         "companies": "Industry Leaders: Google DeepMind, OpenAI, IBM Watson, Amazon AI, Facebook AI Research (FAIR), NVIDIA AI, Microsoft AI and Research"
     },
-    "consult": {
+    "consulting": {
         "name": "Consulting",
         "name2": "",
         "cover_image": "/assets/landing/consult.png",
