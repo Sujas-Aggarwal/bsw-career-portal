@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden md:flex justify-center items-center gap-8 relative">
           {/* Explore Button with Dropdown */}
           {NavItems.map((item, index) => (
-            < >
+            <>
               <span
                 key={index}
                 className="nav-item-home cursor-pointer relative overflow-x-clip"
@@ -57,6 +57,7 @@ export default function Navbar() {
                   DropDownItems={DropDownItems}
                   closeDropdown={closeDropdown}
                   activeSection={item.toLowerCase()}
+                  isDesktop={true}
                 />
               )}
             </>
@@ -130,21 +131,25 @@ function DropDownMenu({
   closeDropdown,
   activeSection,
   NavItems = [],
+  isDesktop = false,
 }: {
   DropDownItems: string[];
   closeDropdown: () => void;
   activeSection: string;
   NavItems?: string[];
+  isDesktop?: boolean;
 }): JSX.Element {
   return (
     <div
       style={{
         left:
-          NavItems.findIndex(
-            (item) => item.toLowerCase() === activeSection.toLowerCase()
-          ) *
-            80 +
-          "px",
+          !isDesktop && activeSection.toLowerCase() === "explore"
+            ? "-10px"
+            : NavItems.findIndex(
+                (item) => item.toLowerCase() === activeSection.toLowerCase()
+              ) *
+                80 +
+              "px",
       }}
       className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-md w-[200px] overflow-hidden"
       onMouseLeave={closeDropdown}

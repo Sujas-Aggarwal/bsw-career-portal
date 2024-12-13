@@ -10,6 +10,9 @@ import { MainResource } from "./Resources";
 function Build() {
   const { profileName } = useParams();
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [profileName]);
+  useEffect(() => {
     setMetadata(
       `Build | ${profileName?.toUpperCase()}`,
       `Build ${profileName?.toUpperCase()}`,
@@ -80,9 +83,9 @@ function Timeline({ profile }: { profile: any }): JSX.Element {
       <div
         style={{
           marginBottom:
-            window.innerWidth > 700 ? (isTop ? "200px" : "-140px") : "0px",
+            window.innerWidth > 700 ? (isTop ? "140px" : "-100px") : "0px",
         }}
-        className={`text-center w-[200px] z-[8] flex flex-col items-center gap-2 ${
+        className={`text-center  md:w-[0px] z-[8] flex flex-col  md:items-center gap-2 ${
           window.innerWidth > 700
             ? isTop
               ? "translate-y-[-50%]"
@@ -94,10 +97,9 @@ function Timeline({ profile }: { profile: any }): JSX.Element {
           <FaArrowDown className="text-xl mb-2 md:flex hidden" />
         ) : null}
         <div
-          className="bg-white  p-4 shadow-md rounded-lg flex flex-col items-center"
-          style={{ border: "1px solid #ccc" }}
+          className="bg-white  p-4  rounded-lg flex flex-col items-center md:min-w-[400px] "
         >
-          <h2 className="font-bold text-lg">{heading}</h2>
+          <h2 className="font-bold text-lg md:whitespace-nowrap">{heading}</h2>
           <p className="text-sm text-gray-700">{content}</p>
         </div>
         {isTop ? <FaArrowUp className="text-xl mt-2 md:flex hidden" /> : null}
@@ -110,11 +112,11 @@ function Timeline({ profile }: { profile: any }): JSX.Element {
       <h1 className="text-2xl md:text-4xl font-bold text-center mb-10">
         Timeline
       </h1>
-      <div className="relative bg-white py-40 md:px-10   w-full gap-10 flex md:flex-row flex-col  md:justify-evenly items-center">
+      <div className="relative bg-white py-16 md:px-10   w-full gap-10 flex md:flex-row flex-col  md:justify-evenly items-center">
         <img
           src="/assets/landing/squiggly_line.svg"
           alt="Line"
-          className="w-full absolute top-[50%] md:rotate-0 rotate-90 h-full object-center translate-y-[-50%]"
+          className="w-full md:flex hidden absolute top-[50%] md:rotate-0 rotate-90 h-full object-center translate-y-[-50%]"
         />
         {profile.timeline.map((item: any, index: number) => (
           <TimelineItem

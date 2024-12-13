@@ -7,6 +7,9 @@ import profileData from "../assets/profiles.json";
 function Resources() {
   const { profileName } = useParams();
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [profileName]);
+  useEffect(() => {
     setMetadata(
       `Resources | ${profileName?.toUpperCase()}`,
       `Resources ${profileName?.toUpperCase()}`,
